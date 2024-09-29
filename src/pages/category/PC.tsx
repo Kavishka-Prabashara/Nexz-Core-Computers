@@ -1,8 +1,8 @@
-const Footer = () => {
+const PC = () => {
     return (
         <section>
         </section>
     );
 };
 
-export default Footer;
+export default PC;

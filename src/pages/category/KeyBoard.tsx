@@ -1,4 +1,4 @@
-const Home = () => {
+const KeyBoard = () => {
     return (
         <div className="p-4">
             <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
@@ -7,4 +7,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default KeyBoard;

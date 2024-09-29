@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/NavBar';
+import SideBar from './components/SideBar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import MyCart from './pages/category/MyCart';
+import Laptop from './pages/category/Laptop';
+import PC from './pages/category/PC';
+import Monitor from './pages/category/Monitor';
+import Mouse from './pages/category/Mouse';
+import Keyboard from './pages/category/KeyBoard';
+import Processor from './pages/category/Processor';
+import Motherboard from './pages/category/MotherBoard';
+import bgPic from './assets/images/bgPic.jpeg';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <Router>
+            <div className="flex flex-col h-screen">
+                <Navbar />
+                <div className="flex flex-grow">
+                    <SideBar />
+                    <div
+                        className="relative flex-grow p-4 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${bgPic})` }}
+                    >
+                        {/* Dark transparent overlay */}
+                        <div className="absolute inset-0 bg-black opacity-50"></div>
+                        <div className="relative z-10"> {/* Content container */}
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/about" element={<About />} />
+                                <Route path="/mycart" element={<MyCart />} />
+                                <Route path="/laptop" element={<Laptop />} />
+                                <Route path="/pc" element={<PC />} />
+                                <Route path="/monitor" element={<Monitor />} />
+                                <Route path="/mouse" element={<Mouse />} />
+                                <Route path="/keyboard" element={<Keyboard />} />
+                                <Route path="/processor" element={<Processor />} />
+                                <Route path="/motherboard" element={<Motherboard />} />
+                            </Routes>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
 
-export default App
+export default App;

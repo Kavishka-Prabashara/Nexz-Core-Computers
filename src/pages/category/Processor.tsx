@@ -1,8 +1,8 @@
-const Footer = () => {
+const Processor = () => {
     return (
         <section>
         </section>
     );
 };
 
-export default Footer;
+export default Processor;

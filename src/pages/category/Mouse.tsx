@@ -1,8 +1,8 @@
-const Footer = () => {
+const Mouse = () => {
     return (
         <section>
         </section>
     );
 };
 
-export default Footer;
+export default Mouse;

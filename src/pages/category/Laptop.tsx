@@ -1,8 +1,8 @@
-const Footer = () => {
+const Laptop = () => {
     return (
         <section>
         </section>
     );
 };
 
-export default Footer;
+export default Laptop;
