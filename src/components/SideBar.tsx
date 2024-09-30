@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiMonitor, FiCpu, FiHardDrive, FiMousePointer, FiMenu, FiX } from 'react-icons/fi';
+import { CiLaptop } from "react-icons/ci";
+import { TfiMouse } from "react-icons/tfi";
+import { FaRegKeyboard } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
+import { BsMotherboard } from "react-icons/bs";
+import { PiGraphicsCardBold } from "react-icons/pi";
+
+
+
+import { FiMonitor, FiCpu, FiHardDrive, FiMenu, FiX } from 'react-icons/fi';
 
 const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +52,7 @@ const SideBar = () => {
                             to="/laptop"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            Laptop
+                            <CiLaptop className="mr-2"/> Laptop
                         </Link>
                     </li>
                     <li>
@@ -51,7 +60,7 @@ const SideBar = () => {
                             to="/pc"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            <FiCpu className="mr-2" /> PC
+                            <FaComputer className="mr-2"/> PC
                         </Link>
                     </li>
                     <li>
@@ -59,7 +68,7 @@ const SideBar = () => {
                             to="/monitor"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            <FiMonitor className="mr-2" /> Monitor
+                            <FiMonitor className="mr-2"/> Monitor
                         </Link>
                     </li>
                     <li>
@@ -67,7 +76,7 @@ const SideBar = () => {
                             to="/mouse"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            <FiMousePointer className="mr-2" /> Mouse
+                            <TfiMouse className="mr-2"/> Mouse
                         </Link>
                     </li>
                     <li>
@@ -75,7 +84,7 @@ const SideBar = () => {
                             to="/keyboard"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            Keyboard
+                            <FaRegKeyboard className="mr-2"/>Keyboard
                         </Link>
                     </li>
                     <li>
@@ -83,7 +92,15 @@ const SideBar = () => {
                             to="/processor"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            <FiCpu className="mr-2" /> Processor
+                            <FiCpu className="mr-2"/> Processor
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/graphiCard"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                        >
+                            <PiGraphicsCardBold className="mr-2"/> Graphic Card
                         </Link>
                     </li>
                     <li>
@@ -91,7 +108,7 @@ const SideBar = () => {
                             to="/motherboard"
                             className="flex items-center text-white bg-blue-950 border border-white block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
-                            <FiHardDrive className="mr-2" /> Motherboard
+                            <BsMotherboard className="mr-2"/> Motherboard
                         </Link>
                     </li>
                 </ul>
