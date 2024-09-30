@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import { CiLaptop } from "react-icons/ci";
 import { TfiMouse } from "react-icons/tfi";
 import { FaRegKeyboard } from "react-icons/fa";
-import { FaComputer } from "react-icons/fa6";
-import { BsMotherboard } from "react-icons/bs";
-import { PiGraphicsCardBold } from "react-icons/pi";
+import { BsMotherboard ,BsDeviceHdd } from "react-icons/bs";
+import { FaHeadphones ,FaComputer } from "react-icons/fa6";
+import { PiComputerTower , PiMemory, PiGraphicsCardBold } from "react-icons/pi";
 
 
 
-import { FiMonitor, FiCpu, FiHardDrive, FiMenu, FiX } from 'react-icons/fi';
+
+import { FiMonitor, FiCpu, FiMenu, FiX } from 'react-icons/fi';
 
 const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -85,6 +86,38 @@ const SideBar = () => {
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
                         >
                             <FaRegKeyboard className="mr-2"/>Keyboard
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/processor"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                        >
+                            <PiMemory className="mr-2"/> Ram
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/processor"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                        >
+                            <BsDeviceHdd className="mr-2"/> Storage
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/processor"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                        >
+                            <FaHeadphones className="mr-2"/> Head Phones
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/processor"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                        >
+                            <PiComputerTower className="mr-2"/> Casing
                         </Link>
                     </li>
                     <li>
