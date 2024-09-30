@@ -50,7 +50,7 @@ const CustomizeSideBar = () => {
 
             {/* Sidebar */}
             <aside
-                className={`bg-blue-900 w-64 p-4 shadow-lg fixed top-0 left-0 h-full z-50 transition-transform transform ${
+                className={`w-64 p-4 shadow-lg fixed top-20 left-0 h-full z-50 transition-transform transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
                 } md:translate-x-0 md:relative`}
             >
@@ -64,7 +64,7 @@ const CustomizeSideBar = () => {
                 </div>
                 {/* Price Filter */}
                 <div className="mb-6">
-                    <h2 className="text-lg font-semibold">Price</h2>
+                    <h2 className="text-lg font-semibold bg text-white">Price</h2>
                     <div className="mt-4">
                         <Range
                             step={100}
@@ -88,17 +88,17 @@ const CustomizeSideBar = () => {
                             )}
                         />
                         <div className="flex justify-between mt-2">
-                            <span>₹{priceRange[0]}</span>
-                            <span>₹{priceRange[1]}</span>
+                            <span className=" text-white">₹{priceRange[0]}</span>
+                            <span className=" text-white">₹{priceRange[1]}</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Availability Filter */}
                 <div className="mb-6">
-                    <h2 className="text-lg font-semibold">Availability</h2>
+                    <h2 className="text-lg font-semibold text-white">Availability</h2>
                     <div className="mt-2">
-                        <label className="flex items-center">
+                        <label className="flex items-center  text-white">
                             <input
                                 type="checkbox"
                                 name="inStock"
@@ -108,7 +108,7 @@ const CustomizeSideBar = () => {
                             />
                             Instock
                         </label>
-                        <label className="flex items-center mt-2">
+                        <label className="flex items-center mt-2 text-white">
                             <input
                                 type="checkbox"
                                 name="outOfStock"
@@ -123,9 +123,9 @@ const CustomizeSideBar = () => {
 
                 {/* Brand Filter */}
                 <div className="mb-6">
-                    <h2 className="text-lg font-semibold">Brands</h2>
+                    <h2 className="text-lg font-semibold text-white">Brands</h2>
                     <div className="mt-2">
-                        <label className="flex items-center">
+                        <label className="flex items-center  text-white">
                             <input
                                 type="checkbox"
                                 name="HP"
@@ -135,7 +135,7 @@ const CustomizeSideBar = () => {
                             />
                             HP
                         </label>
-                        <label className="flex items-center mt-2">
+                        <label className="flex items-center mt-2  text-white">
                             <input
                                 type="checkbox"
                                 name="Dell"
@@ -145,7 +145,7 @@ const CustomizeSideBar = () => {
                             />
                             Dell
                         </label>
-                        <label className="flex items-center mt-2">
+                        <label className="flex items-center mt-2  text-white">
                             <input
                                 type="checkbox"
                                 name="MSI"
