@@ -33,7 +33,7 @@ const SideBar = () => {
 
             {/* Sidebar */}
             <aside
-                className={`bg-blue-900 w-64 p-4 shadow-lg fixed top-0 left-0 h-full z-50 transition-transform transform ${
+                className={`bg-black w-64 p-4 shadow-lg fixed top-0 left-0 h-full z-50 transition-transform transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
                 } md:translate-x-0 md:relative`}
             >
@@ -51,7 +51,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/laptop"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <CiLaptop className="mr-2"/> Laptop
                         </Link>
@@ -59,7 +59,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/pc"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <FaComputer className="mr-2"/> PC
                         </Link>
@@ -67,7 +67,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/monitor"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <FiMonitor className="mr-2"/> Monitor
                         </Link>
@@ -75,7 +75,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/mouse"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <TfiMouse className="mr-2"/> Mouse
                         </Link>
@@ -83,7 +83,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/keyboard"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <FaRegKeyboard className="mr-2"/>Keyboard
                         </Link>
@@ -91,7 +91,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/processor"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <PiMemory className="mr-2"/> Ram
                         </Link>
@@ -99,7 +99,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/processor"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <BsDeviceHdd className="mr-2"/> Storage
                         </Link>
@@ -107,7 +107,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/processor"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <FaHeadphones className="mr-2"/> Head Phones
                         </Link>
@@ -115,7 +115,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/processor"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <PiComputerTower className="mr-2"/> Casing
                         </Link>
@@ -123,7 +123,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/processor"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <FiCpu className="mr-2"/> Processor
                         </Link>
@@ -131,7 +131,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/graphiCard"
-                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <PiGraphicsCardBold className="mr-2"/> Graphic Card
                         </Link>
@@ -139,7 +139,7 @@ const SideBar = () => {
                     <li>
                         <Link
                             to="/motherboard"
-                            className="flex items-center text-white bg-blue-950 border border-white block transition-all duration-300 rounded-lg hover:bg-blue-700 active:bg-blue-800 text-lg"
+                            className="flex items-center text-white bg-blue-950 border border-white block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <BsMotherboard className="mr-2"/> Motherboard
                         </Link>
