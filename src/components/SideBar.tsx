@@ -22,7 +22,7 @@ const SideBar = () => {
     return (
         <>
             {/* Hamburger Icon (visible on mobile) */}
-            <div className="absolute top-30 left-4 md:hidden z-20">
+            <div className="absolute top-20 left-4 md:hidden z-20">
                 <button
                     onClick={toggleSidebar}
                     className="text-white focus:outline-none"
@@ -150,7 +150,7 @@ const SideBar = () => {
             {/* Overlay (for mobile) */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-black opacity-50 md:hidden"
+                    className="fixed inset-0 bg-black opacity-50 md:hidden z-30"
                     onClick={toggleSidebar}
                 />
             )}

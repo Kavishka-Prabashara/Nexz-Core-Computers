@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Range } from 'react-range';
 
-const CustomizeSideBar: React.FC = () => {
+const CustomizeSideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -39,21 +39,29 @@ const CustomizeSideBar: React.FC = () => {
     return (
         <>
             {/* Hamburger Icon (visible on mobile) */}
-            <div className={`fixed top-5 left-5 z-50 ${isOpen ? '' : 'md:hidden'}`}>
+            <div className="absolute top-5 left-0 md:hidden z-50">
                 <button
                     onClick={toggleSidebar}
                     className="text-white focus:outline-none"
                 >
-                    {isOpen ? <FiX size={30} /> : <FiMenu size={30} />}
+                    {isOpen ? <FiX size={30}/> : <FiMenu size={30}/>}
                 </button>
             </div>
 
             {/* Sidebar */}
             <aside
-                className={`bg-blue-900 w-64 p-4 shadow-lg fixed top-0 left-0 h-full z-40 transition-transform transform ${
+                className={`bg-blue-900 w-64 p-4 shadow-lg fixed top-0 left-0 h-full z-50 transition-transform transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
                 } md:translate-x-0 md:relative`}
             >
+                <div className="flex justify-end mb-4 md:hidden">
+                    <button
+                        onClick={toggleSidebar}
+                        className="text-white focus:outline-none"
+                    >
+                        <FiX size={30}/>
+                    </button>
+                </div>
                 {/* Price Filter */}
                 <div className="mb-6">
                     <h2 className="text-lg font-semibold">Price</h2>
@@ -64,7 +72,7 @@ const CustomizeSideBar: React.FC = () => {
                             max={1000000}
                             values={priceRange}
                             onChange={(values) => handlePriceChange(values)}
-                            renderTrack={({ props, children }) => (
+                            renderTrack={({props, children}) => (
                                 <div
                                     {...props}
                                     className="w-full h-2 bg-gray-300 rounded"
@@ -72,7 +80,7 @@ const CustomizeSideBar: React.FC = () => {
                                     {children}
                                 </div>
                             )}
-                            renderThumb={({ props }) => (
+                            renderThumb={({props}) => (
                                 <div
                                     {...props}
                                     className="w-5 h-5 bg-white border border-gray-300 rounded-full"
@@ -154,7 +162,7 @@ const CustomizeSideBar: React.FC = () => {
             {/* Overlay (for mobile) */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-black opacity-50 md:hidden z-30"
+                    className="fixed inset-0 bg-black opacity-50 md:hidden z-20"
                     onClick={toggleSidebar}
                 />
             )}
