@@ -2,7 +2,7 @@ import React from 'react';
 import CustomizeSideBar from './CustomizeSideBar'; // Sidebar component
 
 interface ProductLayoutProps {
-    title: string; // Title prop for the page
+    /*title: string; // Title prop for the page*/
     children: React.ReactNode; // Children to render inside the layout
 }
 
