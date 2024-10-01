@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CiLaptop } from "react-icons/ci";
 import { TfiMouse } from "react-icons/tfi";
@@ -6,10 +6,6 @@ import { FaRegKeyboard } from "react-icons/fa";
 import { BsMotherboard ,BsDeviceHdd } from "react-icons/bs";
 import { FaHeadphones ,FaComputer } from "react-icons/fa6";
 import { PiComputerTower , PiMemory, PiGraphicsCardBold } from "react-icons/pi";
-
-
-
-
 import { FiMonitor, FiCpu, FiMenu, FiX } from 'react-icons/fi';
 
 const SideBar = () => {
