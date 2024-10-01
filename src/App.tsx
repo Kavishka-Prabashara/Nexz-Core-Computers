@@ -13,6 +13,11 @@ import Keyboard from './pages/category/KeyBoard';
 import Processor from './pages/category/Processor';
 import Motherboard from './pages/category/MotherBoard';
 import bgPic from './assets/images/bgPic.jpeg';
+import Ram from "./pages/category/Ram.tsx";
+import Storages from "./pages/category/Storage.tsx";
+import GraphicCard from "./pages/category/GraphicCard.tsx";
+import HeadPhones from "./pages/category/HeadPhone.tsx";
+import Casing from "./pages/category/Casing.tsx";
 
 function App() {
     return (
@@ -36,6 +41,11 @@ function App() {
                                 <Route path="/pc" element={<PC />} />
                                 <Route path="/monitor" element={<Monitor />} />
                                 <Route path="/mouse" element={<Mouse />} />
+                                <Route path="/casing" element={<Casing />} />
+                                <Route path="/headphones" element={<HeadPhones />} />
+                                <Route path="/ram" element={<Ram />} />
+                                <Route path="/storages" element={<Storages />} />
+                                <Route path="/graphiccard" element={<GraphicCard />} />
                                 <Route path="/keyboard" element={<Keyboard />} />
                                 <Route path="/processor" element={<Processor />} />
                                 <Route path="/motherboard" element={<Motherboard />} />

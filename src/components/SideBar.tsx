@@ -90,7 +90,7 @@ const SideBar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/processor"
+                            to="/ram"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <PiMemory className="mr-2"/> Ram
@@ -98,7 +98,7 @@ const SideBar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/processor"
+                            to="/storages"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <BsDeviceHdd className="mr-2"/> Storage
@@ -106,7 +106,7 @@ const SideBar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/processor"
+                            to="/headphones"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <FaHeadphones className="mr-2"/> Head Phones
@@ -114,7 +114,7 @@ const SideBar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/processor"
+                            to="/casing"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <PiComputerTower className="mr-2"/> Casing
@@ -130,7 +130,7 @@ const SideBar = () => {
                     </li>
                     <li>
                         <Link
-                            to="/graphiCard"
+                            to="/graphiccard"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
                             <PiGraphicsCardBold className="mr-2"/> Graphic Card
