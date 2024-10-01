@@ -52,7 +52,6 @@ const Monitor: React.FC = () => {
                     </div>
                 </div>
             </main>
-
         </section>
     )
         ;
