@@ -1,10 +1,52 @@
-const KeyBoard = () => {
+import React from 'react';
+import ProductCard from '../../components/ProductCard'; // ProductCard component
+import ProductLayout from '../../components/ProductLayout'; // Import the layout interface
+
+const Monitor: React.FC = () => {
     return (
-        <div className="p-4">
-            <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
-            <p className="mt-4">This is the home page content.</p>
-        </div>
+        <ProductLayout title="KeyBoard">
+            <div className="flex justify-center items-center">
+                <ProductCard
+                    image="https://via.placeholder.com/300"
+                    name="Cool Product"
+                    category="Accessories"
+                    description="A cool product you don't want to miss."
+                    price={59.99}
+                    availability="In Stock"
+                />
+            </div>
+            <div className="flex justify-center items-center">
+                <ProductCard
+                    image="https://via.placeholder.com/300"
+                    name="Cool Product"
+                    category="Accessories"
+                    description="A cool product you don't want to miss."
+                    price={59.99}
+                    availability="In Stock"
+                />
+            </div>
+            <div className="flex justify-center items-center">
+                <ProductCard
+                    image="https://via.placeholder.com/300"
+                    name="Cool Product"
+                    category="Accessories"
+                    description="A cool product you don't want to miss."
+                    price={59.99}
+                    availability="In Stock"
+                />
+            </div>
+            <div className="flex justify-center items-center">
+                <ProductCard
+                    image="https://via.placeholder.com/300"
+                    name="Cool Product"
+                    category="Accessories"
+                    description="A cool product you don't want to miss."
+                    price={59.99}
+                    availability="In Stock"
+                />
+            </div>
+        </ProductLayout>
     );
 };
 
-export default KeyBoard;
+export default Monitor;
