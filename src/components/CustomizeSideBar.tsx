@@ -88,8 +88,8 @@ const CustomizeSideBar = () => {
                             )}
                         />
                         <div className="flex justify-between mt-2">
-                            <span className=" text-white">₹{priceRange[0]}</span>
-                            <span className=" text-white">₹{priceRange[1]}</span>
+                            <span className=" text-white">Rs.{priceRange[0]}</span>
+                            <span className=" text-white">Rs.{priceRange[1]}</span>
                         </div>
                     </div>
                 </div>
