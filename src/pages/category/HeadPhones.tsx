@@ -5,9 +5,9 @@ import ProductLayout from '../../components/ProductLayout'; // Import the layout
 const Monitor: React.FC = () => {
     return (
         <div>
-            <h1 className="text-4xl text-white">Mouse</h1>
+            <h1 className="text-4xl text-white">Head Phones</h1>
             <ProductLayout>
-            <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
                     <ProductCard
                         image="https://via.placeholder.com/300"
                         name="Cool Product"
@@ -52,4 +52,4 @@ const Monitor: React.FC = () => {
     );
 };
 
-            export default Monitor;
+export default Monitor;
