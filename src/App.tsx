@@ -69,7 +69,7 @@ function App() {
                 </div>
 
                 {/* Conditionally render Footer */}
-                {/*<Footer />}*/}
+                {/*<Footer />*/}
             </div>
         </Router>
     );
