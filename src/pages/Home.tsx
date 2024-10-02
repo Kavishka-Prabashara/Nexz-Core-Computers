@@ -82,7 +82,7 @@ const Home = () => {
             {/* TypeWriter Section */}
             <section>
                 <div className="flex justify-center items-center h-40">
-                    <h1 className="text-2xl md:text-4xl font-bold text-blue-600">
+                    <h1 className="text-2xl md:text-4xl font-bold text-white neon-text">
                         <Typewriter
                             words={['Sri Lanka #No 1 PC Shop', 'Island Wide Delivery', 'Fastest Delivery']}
                             loop={true}
