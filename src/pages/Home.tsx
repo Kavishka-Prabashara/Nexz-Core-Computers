@@ -7,6 +7,7 @@ import product5 from "../assets/product/5.png";
 import { FiSearch, FiSettings } from "react-icons/fi";
 import { FaChevronLeft, FaChevronRight, FaTruck } from "react-icons/fa";
 import { AiFillSafetyCertificate } from "react-icons/ai";
+import { Typewriter } from 'react-simple-typewriter';
 
 const images = [product1, product2, product3, product4, product5];
 
@@ -47,15 +48,32 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* TypeWriter Section */}
+            <section>
+                <div className="flex justify-center items-center h-40">
+                    <h1 className="text-2xl md:text-4xl font-bold text-blue-600">
+                        <Typewriter
+                            words={['Sri Lanka #No 1 PC Shop', 'Island Wide Delivery', 'Fastest Delivery']}
+                            loop={true}
+                            cursor
+                            cursorStyle="_"
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </h1>
+                </div>
+            </section>
+
             {/* Image Slider */}
             <section className="relative w-full h-[400px] overflow-hidden">
                 <div
                     className="flex transition-transform duration-500"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    style={{transform: `translateX(-${currentIndex * 100}%)`}}
                 >
                     {images.map((image, index) => (
                         <div key={index} className="w-full flex-shrink-0">
-                            <img
+                        <img
                                 src={image}
                                 alt={`Slide ${index + 1}`}
                                 className="w-full h-[400px] object-cover"
