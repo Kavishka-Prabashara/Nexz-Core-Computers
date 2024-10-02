@@ -42,7 +42,7 @@ function App() {
                         }}
                     >
                         {/* Dark transparent overlay */}
-                        <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-black opacity-80 pointer-events-none"></div>
 
                         {/* Content container */}
                         <div className="relative z-10">
