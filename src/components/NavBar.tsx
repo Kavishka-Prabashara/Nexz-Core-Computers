@@ -28,7 +28,7 @@ const NavBar = () => {
     }, [scrollPosition]);
 
     return (
-        <nav className={`bg-gray-800 p-4 fixed w-full top-0 z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <nav className={`bg-blue-900 p-4 fixed w-full top-0 z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="container mx-auto flex justify-between items-center">
                 {/* Left: Logo */}
                 <div className="flex items-center">
@@ -78,7 +78,7 @@ const NavBar = () => {
                     <span>LKR Total:</span> <span className="font-bold">4500.00</span>
                 </div>
                 <div className="text-white">
-                    Customer Care: <span className="font-bold">+94 123 456 789</span>
+                    Customer Care: <span className="font-bold">+94 777 456 789</span>
                 </div>
             </div>
         </nav>
