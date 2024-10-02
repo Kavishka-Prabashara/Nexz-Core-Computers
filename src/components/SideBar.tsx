@@ -18,7 +18,7 @@ const SideBar = () => {
     return (
         <>
             {/* Hamburger Icon (visible on mobile) */}
-            <div className="fixed top-40 left-4 md:hidden z-20">
+            <div className="fixed top-20 left-4 md:hidden z-20">
                 <button
                     onClick={toggleSidebar}
                     className="text-white focus:outline-none"
