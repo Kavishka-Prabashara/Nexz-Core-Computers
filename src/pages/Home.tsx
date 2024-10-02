@@ -8,12 +8,43 @@ import { FiSearch, FiSettings } from "react-icons/fi";
 import { FaChevronLeft, FaChevronRight, FaTruck } from "react-icons/fa";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { Typewriter } from 'react-simple-typewriter';
+import ProductSlider from "../components/CustomeSlider.tsx";
 
 const images = [product1, product2, product3, product4, product5];
 
 const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+
+    const specialOffers = [
+        {
+            name: 'Gaming Laptop',
+            category: 'Laptops',
+            price: 1500,
+            image: product1,
+        },
+        {
+            name: 'Wireless Mouse',
+            category: 'Accessories',
+            price: 50,
+            image: product2,
+        },
+    ];
+
+    const newArrivals = [
+        {
+            name: 'Smartphone',
+            category: 'Mobiles',
+            price: 800,
+            image: product3,
+        },
+        {
+            name: 'Gaming Keyboard',
+            category: 'Accessories',
+            price: 120,
+            image: product4,
+        },
+    ];
     // Auto-slide every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
@@ -44,7 +75,7 @@ const Home = () => {
                         placeholder="Search..."
                         className="w-full py-2 pl-10 pr-4 bg-transparent border border-white text-white rounded-md placeholder-white focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300"
                     />
-                    <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white" />
+                    <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"/>
                 </div>
             </div>
 
@@ -73,7 +104,7 @@ const Home = () => {
                 >
                     {images.map((image, index) => (
                         <div key={index} className="w-full flex-shrink-0">
-                        <img
+                            <img
                                 src={image}
                                 alt={`Slide ${index + 1}`}
                                 className="w-full h-[400px] object-cover"
@@ -87,7 +118,7 @@ const Home = () => {
                     onClick={handlePrev}
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
                 >
-                    <FaChevronLeft />
+                    <FaChevronLeft/>
                 </button>
 
                 {/* Next Button */}
@@ -95,7 +126,7 @@ const Home = () => {
                     onClick={handleNext}
                     className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
                 >
-                    <FaChevronRight />
+                    <FaChevronRight/>
                 </button>
 
                 {/* Dots Navigation */}
@@ -112,34 +143,69 @@ const Home = () => {
                 </div>
             </section>
 
+            <section>
+                <div className="flex flex-col md:flex-row flex-wrap">
+                    <ProductSlider
+                        title="Special Offers"
+                        products={specialOffers}
+                        titleClass="text-white text-4xl"
+                    />
+                    <ProductSlider
+                        title="New Arrivals"
+                        products={newArrivals}
+                        titleClass="text-white text-4xl"
+                    />
+                </div>
+            </section>
+
+
             {/* Cards Section */}
-            <div className="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4 my-10">
+            <div
+                className="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4 my-10">
                 {/* Warranty Assured Card */}
                 <div className="bg-white shadow-lg p-6 rounded-lg max-w-xs text-center">
-                    <AiFillSafetyCertificate size={48} className="mx-auto text-blue-500 mb-4" />
+                    <AiFillSafetyCertificate size={48} className="mx-auto text-blue-500 mb-4"/>
                     <h3 className="text-xl font-semibold">Warranty</h3>
                     <p className="text-gray-600 mt-2">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
                     </p>
                     <p className="text-xs text-gray-500 mt-2">*Conditions Applied</p>
                 </div>
 
                 {/* Custom Orders Card */}
                 <div className="bg-white shadow-lg p-6 rounded-lg max-w-xs text-center">
-                    <FiSettings size={48} className="mx-auto text-green-500 mb-4" />
+                    <FiSettings size={48} className="mx-auto text-green-500 mb-4"/>
                     <h3 className="text-xl font-semibold">Customized Orders</h3>
                     <p className="text-gray-600 mt-2">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
                     </p>
                     <p className="text-xs text-gray-500 mt-2">*Conditions Applied</p>
                 </div>
 
                 {/* Home Delivery Card */}
                 <div className="bg-white shadow-lg p-6 rounded-lg max-w-xs text-center">
-                    <FaTruck size={48} className="mx-auto text-red-500 mb-4" />
+                    <FaTruck size={48} className="mx-auto text-red-500 mb-4"/>
                     <h3 className="text-xl font-semibold">Cash on Delivery</h3>
                     <p className="text-gray-600 mt-2">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
                     </p>
                     <p className="text-xs text-gray-500 mt-2">*Conditions Applied</p>
                 </div>
