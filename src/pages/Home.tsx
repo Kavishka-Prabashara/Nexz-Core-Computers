@@ -68,7 +68,7 @@ const Home = () => {
     return (
         <div>
             {/* Search Bar */}
-            <div className="flex justify-center items-center my-14">
+            <div className="flex justify-center top-40 items-center my-14">
                 <div className="relative w-full max-w-screen-sm px-4">
                     <input
                         type="text"

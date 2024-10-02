@@ -5,9 +5,9 @@ import ProductLayout from '../../components/ProductLayout'; // Import the layout
 const Monitor: React.FC = () => {
     return (
         <div>
-            <h1 className="text-4xl text-white">MotherBoard</h1>
-        <ProductLayout>
-            <div className="flex justify-center items-center">
+            <h1 className="text-4xl text-white ml-0 md:ml-4 lg:ml-8">MotherBoard</h1>
+            <ProductLayout>
+                <div className="flex justify-center items-center">
                 <ProductCard
                     image="https://via.placeholder.com/300"
                     name="Cool Product"

@@ -5,7 +5,7 @@ import ProductLayout from '../../components/ProductLayout'; // Import the layout
 const Monitor: React.FC = () => {
     return (
         <div>
-            <h1 className="text-4xl text-white">Head Phones</h1>
+            <h1 className="text-4xl text-white ml-0 md:ml-4 lg:ml-8">Head Phone</h1>
             <ProductLayout>
                 <div className="flex justify-center items-center">
                     <ProductCard
