@@ -49,7 +49,7 @@ const SideBar = () => {
                             to="/laptop"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <CiLaptop className="mr-2"/> Laptop
+                            <CiLaptop className="mr-2 ml-4"/> Laptop
                         </Link>
                     </li>
                     <li>
@@ -57,7 +57,7 @@ const SideBar = () => {
                             to="/pc"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <FaComputer className="mr-2"/> PC
+                            <FaComputer className="mr-2 ml-4"/> PC
                         </Link>
                     </li>
                     <li>
@@ -65,7 +65,7 @@ const SideBar = () => {
                             to="/monitor"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <FiMonitor className="mr-2"/> Monitor
+                            <FiMonitor className="mr-2 ml-4"/> Monitor
                         </Link>
                     </li>
                     <li>
@@ -73,7 +73,7 @@ const SideBar = () => {
                             to="/mouse"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <TfiMouse className="mr-2"/> Mouse
+                            <TfiMouse className="mr-2 ml-4"/> Mouse
                         </Link>
                     </li>
                     <li>
@@ -81,7 +81,7 @@ const SideBar = () => {
                             to="/keyboard"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <FaRegKeyboard className="mr-2"/>Keyboard
+                            <FaRegKeyboard className="mr-2 ml-4"/>Keyboard
                         </Link>
                     </li>
                     <li>
@@ -89,7 +89,7 @@ const SideBar = () => {
                             to="/ram"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <PiMemory className="mr-2"/> Ram
+                            <PiMemory className="mr-2 ml-4"/> Ram
                         </Link>
                     </li>
                     <li>
@@ -97,7 +97,7 @@ const SideBar = () => {
                             to="/storages"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <BsDeviceHdd className="mr-2"/> Storage
+                            <BsDeviceHdd className="mr-2 ml-4"/> Storage
                         </Link>
                     </li>
                     <li>
@@ -105,7 +105,7 @@ const SideBar = () => {
                             to="/headphones"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <FaHeadphones className="mr-2"/> Head Phones
+                            <FaHeadphones className="mr-2 ml-4"/> Head Phones
                         </Link>
                     </li>
                     <li>
@@ -113,7 +113,7 @@ const SideBar = () => {
                             to="/casing"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <PiComputerTower className="mr-2"/> Casing
+                            <PiComputerTower className="mr-2 ml-4"/> Casing
                         </Link>
                     </li>
                     <li>
@@ -121,7 +121,7 @@ const SideBar = () => {
                             to="/processor"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <FiCpu className="mr-2"/> Processor
+                            <FiCpu className="mr-2 ml-4"/> Processor
                         </Link>
                     </li>
                     <li>
@@ -129,7 +129,7 @@ const SideBar = () => {
                             to="/graphiccard"
                             className="flex items-center text-white bg-blue-950 border border-white pb-2 block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <PiGraphicsCardBold className="mr-2"/> Graphic Card
+                            <PiGraphicsCardBold className="mr-2 ml-4"/> Graphic Card
                         </Link>
                     </li>
                     <li>
@@ -137,7 +137,7 @@ const SideBar = () => {
                             to="/motherboard"
                             className="flex items-center text-white bg-blue-950 border border-white block transition-all duration-300 hover:bg-blue-700 active:bg-blue-800 text-lg h-16"
                         >
-                            <BsMotherboard className="mr-2"/> Motherboard
+                            <BsMotherboard className="mr-2 ml-4"/> Motherboard
                         </Link>
                     </li>
                 </ul>
