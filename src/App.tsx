@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import SideBar from './components/SideBar';
-/*import Footer from './components/Footer';*/
 import Home from './pages/Home';
 import About from './pages/About';
 import MyCart from './pages/category/MyCart';
@@ -20,9 +19,8 @@ import HeadPhones from './pages/category/HeadPhone.tsx';
 import Casing from './pages/category/Casing.tsx';
 
 function App() {
-
     return (
-        <Router>
+        <Router basename="/Nexz-Core-Computers">
             <div className="flex flex-col h-screen">
                 {/* Fixed Navbar */}
                 <Navbar />
@@ -48,7 +46,7 @@ function App() {
                         {/* Content container */}
                         <div className="relative z-10">
                             <Routes>
-                                <Route path="/Nexz-Core-Computers/" element={<Home />} />
+                                <Route path="/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
                                 <Route path="/mycart" element={<MyCart />} />
                                 <Route path="/laptop" element={<Laptop />} />
