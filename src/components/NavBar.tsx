@@ -51,7 +51,7 @@ const NavBar = () => {
                     <div className="hidden md:flex items-center space-x-4">
                         <div
                             className="text-white bg-gradient-to-r from-blue-500 to-blue-700 p-4 rounded-lg flex items-center justify-center">
-                            Customer Care: <span className="font-bold">+94 71 599 7463</span>
+                            Customer Care: <span className="font-bold">+94 123 456 789</span>
                         </div>
                     </div>
 

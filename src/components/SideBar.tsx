@@ -18,7 +18,7 @@ const SideBar = () => {
     return (
         <>
             {/* Hamburger Icon (visible on mobile) */}
-            <div className="absolute top-20 left-4 md:hidden z-20">
+            <div className="fixed top-40 left-4 md:hidden z-20">
                 <button
                     onClick={toggleSidebar}
                     className="text-white focus:outline-none"
@@ -29,7 +29,7 @@ const SideBar = () => {
 
             {/* Sidebar */}
             <aside
-                className={`bg-black w-64 p-4 shadow-lg fixed top-0 left-0 h-full z-50 transition-transform transform ${
+                className={`bg-black w-64 p-4 shadow-lg fixed top-20 left-0 h-full z-50 transition-transform transform ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
                 } md:translate-x-0 md:relative`}
             >
