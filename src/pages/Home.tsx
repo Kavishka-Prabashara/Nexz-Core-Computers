@@ -4,14 +4,13 @@ import product2 from "../assets/product/2.png";
 import product3 from "../assets/product/3.png";
 import product4 from "../assets/product/4.png";
 import product5 from "../assets/product/5.png";
-import product7 from "../assets/product/7.jpeg";
 import { FiSearch, FiSettings } from "react-icons/fi";
 import { FaChevronLeft, FaChevronRight, FaTruck } from "react-icons/fa";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { Typewriter } from 'react-simple-typewriter';
 import ProductSlider from "../components/CustomeSlider.tsx";
 
-const images = [product1, product2, product3, product4, product5,product7];
+const images = [product1, product2, product3, product4, product5];
 
 const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -165,10 +164,11 @@ const Home = () => {
             <div
                 className="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4 my-10">
                 {/* Warranty Assured Card */}
-                <div className="bg-white shadow-lg p-6 rounded-lg max-w-xs text-center">
-                    <AiFillSafetyCertificate size={48} className="mx-auto text-blue-500 mb-4"/>
-                    <h3 className="text-xl font-semibold">Warranty</h3>
-                    <p className="text-gray-600 mt-2">
+                <div
+                    className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 shadow-lg p-6 rounded-lg max-w-xs text-center border border-blue-500 hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+                    <AiFillSafetyCertificate size={48} className="mx-auto text-white mb-4 neon-text"/>
+                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Warranty</h3>
+                    <p className="text-gray-200 mt-2">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                         of type and scrambled it to make a type specimen book. It has survived not only five centuries,
@@ -177,14 +177,15 @@ const Home = () => {
                         and more recently with desktop publishing software like Aldus PageMaker including versions of
                         Lorem Ipsum.
                     </p>
-                    <p className="text-xs text-gray-500 mt-2">*Conditions Applied</p>
+                    <p className="text-xs text-gray-300 mt-2">*Conditions Applied</p>
                 </div>
 
                 {/* Custom Orders Card */}
-                <div className="bg-white shadow-lg p-6 rounded-lg max-w-xs text-center">
-                    <FiSettings size={48} className="mx-auto text-green-500 mb-4"/>
-                    <h3 className="text-xl font-semibold">Customized Orders</h3>
-                    <p className="text-gray-600 mt-2">
+                <div
+                    className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 shadow-lg p-6 rounded-lg max-w-xs text-center border border-green-500 hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+                    <FiSettings size={48} className="mx-auto text-white mb-4 neon-text"/>
+                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Customized Orders</h3>
+                    <p className="text-gray-200 mt-2">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                         of type and scrambled it to make a type specimen book. It has survived not only five centuries,
@@ -193,14 +194,15 @@ const Home = () => {
                         and more recently with desktop publishing software like Aldus PageMaker including versions of
                         Lorem Ipsum.
                     </p>
-                    <p className="text-xs text-gray-500 mt-2">*Conditions Applied</p>
+                    <p className="text-xs text-gray-300 mt-2">*Conditions Applied</p>
                 </div>
 
-                {/* Home Delivery Card */}
-                <div className="bg-white shadow-lg p-6 rounded-lg max-w-xs text-center">
-                    <FaTruck size={48} className="mx-auto text-red-500 mb-4"/>
-                    <h3 className="text-xl font-semibold">Cash on Delivery</h3>
-                    <p className="text-gray-600 mt-2">
+                {/* Cash on Delivery Card */}
+                <div
+                    className="bg-gradient-to-r from-red-400 via-red-500 to-red-600 shadow-lg p-6 rounded-lg max-w-xs text-center border border-red-500 hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
+                    <FaTruck size={48} className="mx-auto text-white mb-4 neon-text"/>
+                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Cash on Delivery</h3>
+                    <p className="text-gray-200 mt-2">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                         of type and scrambled it to make a type specimen book. It has survived not only five centuries,
@@ -209,7 +211,7 @@ const Home = () => {
                         and more recently with desktop publishing software like Aldus PageMaker including versions of
                         Lorem Ipsum.
                     </p>
-                    <p className="text-xs text-gray-500 mt-2">*Conditions Applied</p>
+                    <p className="text-xs text-gray-300 mt-2">*Conditions Applied</p>
                 </div>
             </div>
         </div>
