@@ -4,13 +4,14 @@ import product2 from "../assets/product/2.png";
 import product3 from "../assets/product/3.png";
 import product4 from "../assets/product/4.png";
 import product5 from "../assets/product/5.png";
+import product7 from "../assets/product/7.jpeg";
 import { FiSearch, FiSettings } from "react-icons/fi";
 import { FaChevronLeft, FaChevronRight, FaTruck } from "react-icons/fa";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { Typewriter } from 'react-simple-typewriter';
 import ProductSlider from "../components/CustomeSlider.tsx";
 
-const images = [product1, product2, product3, product4, product5];
+const images = [product1, product2, product3, product4, product5,product7];
 
 const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +85,7 @@ const Home = () => {
                 <div className="flex justify-center items-center h-40">
                     <h1 className="text-2xl md:text-4xl font-bold text-white neon-text">
                         <Typewriter
-                            words={['Sri Lanka #No 1 PC Shop', 'Island Wide Delivery', 'Fastest Delivery']}
+                            words={['NexCore Computers','Sri Lanka #No 1 PC Shop', 'Island Wide Delivery', 'Fastest Delivery']}
                             loop={true}
                             cursor
                             cursorStyle="_"
@@ -97,13 +98,13 @@ const Home = () => {
             </section>
 
             {/* Image Slider */}
-            <section className="relative w-full h-[400px] overflow-hidden">
-                <div
-                    className="flex transition-transform duration-500"
+            <div className="flex justify-center items-center my-14">
+            <section className="relative w-2/6 h-[500px] overflow-hidden">
+                <div className="flex transition-transform duration-500"
                     style={{transform: `translateX(-${currentIndex * 100}%)`}}
-                >
+                    >
                     {images.map((image, index) => (
-                        <div key={index} className="w-full flex-shrink-0">
+                        <div key={index} className="w-full flex-shrink-0 h-80 ">
                             <img
                                 src={image}
                                 alt={`Slide ${index + 1}`}
@@ -142,6 +143,7 @@ const Home = () => {
                     ))}
                 </div>
             </section>
+            </div>
 
             <section>
                 <div className="flex flex-col md:flex-row flex-wrap">
