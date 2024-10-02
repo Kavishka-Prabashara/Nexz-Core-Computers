@@ -48,15 +48,19 @@ const NavBar = () => {
                         <span><Link to="/mycart" className="p-2">My Cart</Link></span>
                         <span>LKR Total:</span> <span className="font-bold">4500.00</span>
                     </div>
-                    <div className="text-white">
-                        Customer Care: <span className="font-bold">+94 123 456 789</span>
+                    <div className="hidden md:flex items-center space-x-4">
+                        <div
+                            className="text-white bg-gradient-to-r from-blue-500 to-blue-700 p-4 rounded-lg flex items-center justify-center">
+                            Customer Care: <span className="font-bold">+94 71 599 7463</span>
+                        </div>
                     </div>
+
                 </div>
 
                 {/* Mobile Burger Icon */}
                 <div className="md:hidden">
                     <button onClick={() => setMenuOpen(!menuOpen)}>
-                        <FiMenu className="text-white h-6 w-6" />
+                        <FiMenu className="text-white h-6 w-6"/>
                     </button>
                 </div>
             </div>
