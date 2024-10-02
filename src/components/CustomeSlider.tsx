@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 
 interface ProductSliderProps {
     title: string;
@@ -28,9 +29,9 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, products, titleCla
             <div className="relative w-full flex justify-center items-center">
                 <button
                     onClick={prevSlide}
-                    className="absolute left-0 bg-gray-200 p-2 rounded-full"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
                 >
-                    &#8249;
+                    <FaChevronLeft/>
                 </button>
 
                 <div className="w-80 h-80 overflow-hidden">
@@ -48,9 +49,9 @@ const ProductSlider: React.FC<ProductSliderProps> = ({ title, products, titleCla
 
                 <button
                     onClick={nextSlide}
-                    className="absolute right-0 bg-gray-200 p-2 rounded-full"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
                 >
-                    &#8250;
+                    <FaChevronRight/>
                 </button>
             </div>
         </div>
