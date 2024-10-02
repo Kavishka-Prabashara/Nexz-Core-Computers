@@ -27,11 +27,16 @@ function App() {
                 <div className="flex flex-grow">
                     <SideBar />
                     <div
-                        className="relative flex-grow p-4 bg-cover bg-center"
-                        style={{ backgroundImage: `url(${bgPic})` }}
+                        className="relative flex-grow p-4"
+                        style={{
+                            backgroundImage: `url(${bgPic})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundAttachment: 'fixed', // Ensures the image stays fixed
+                        }}
                     >
                         {/* Dark transparent overlay */}
-                        <div className="absolute inset-0 bg-black opacity-50"></div>
+                        <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
                         <div className="relative z-10"> {/* Content container */}
                             <Routes>
                                 <Route path="/" element={<Home />} />
