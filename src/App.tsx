@@ -13,31 +13,39 @@ import Keyboard from './pages/category/KeyBoard';
 import Processor from './pages/category/Processor';
 import Motherboard from './pages/category/MotherBoard';
 import bgPic from './assets/images/bgPic.jpeg';
-import Ram from "./pages/category/Ram.tsx";
-import Storages from "./pages/category/Storage.tsx";
-import GraphicCard from "./pages/category/GraphicCard.tsx";
-import HeadPhones from "./pages/category/HeadPhone.tsx";
-import Casing from "./pages/category/Casing.tsx";
+import Ram from './pages/category/Ram.tsx';
+import Storages from './pages/category/Storage.tsx';
+import GraphicCard from './pages/category/GraphicCard.tsx';
+import HeadPhones from './pages/category/HeadPhone.tsx';
+import Casing from './pages/category/Casing.tsx';
 
 function App() {
     return (
         <Router>
             <div className="flex flex-col h-screen">
+                {/* Fixed Navbar */}
                 <Navbar />
-                <div className="flex flex-grow">
+
+                {/* Main Content */}
+                <div className="sticky flex flex-grow" style={{ marginTop: '80px' }}> {/* Adjust margin to match navbar height */}
+                    {/* Sidebar */}
                     <SideBar />
+
+                    {/* Main Content Area */}
                     <div
                         className="relative flex-grow p-4"
                         style={{
                             backgroundImage: `url(${bgPic})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
-                            backgroundAttachment: 'fixed', // Ensures the image stays fixed
+                            backgroundAttachment: 'fixed',
                         }}
                     >
                         {/* Dark transparent overlay */}
                         <div className="absolute inset-0 bg-black opacity-60 pointer-events-none"></div>
-                        <div className="relative z-10"> {/* Content container */}
+
+                        {/* Content container */}
+                        <div className="relative z-10">
                             <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
@@ -58,6 +66,8 @@ function App() {
                         </div>
                     </div>
                 </div>
+
+                {/* Footer */}
                 <Footer />
             </div>
         </Router>

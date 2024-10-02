@@ -1,13 +1,34 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiMenu } from 'react-icons/fi'; // Burger icon
 import Logo from '../assets/images/logo.jpeg';
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+
+            if (scrollPosition > currentScrollPos || currentScrollPos === 0) {
+                setIsNavbarVisible(true); // Show the navbar when scrolling up or at the top
+            } else {
+                setIsNavbarVisible(false); // Hide the navbar when scrolling down
+            }
+
+            setScrollPosition(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrollPosition]);
 
     return (
-        <nav className="bg-gray-800 p-4">
+        <nav className={`bg-gray-800 p-4 fixed w-full top-0 z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="container mx-auto flex justify-between items-center">
                 {/* Left: Logo */}
                 <div className="flex items-center">
@@ -16,15 +37,15 @@ const NavBar = () => {
                 </div>
 
                 {/* Center: Menu items for larger screens */}
-                <ul className={`hidden md:flex flex-grow justify-end space-x-6 text-white`}>
+                <ul className="hidden md:flex flex-grow justify-end space-x-6 text-white">
                     <li><Link to="/" className="p-2">Home</Link></li>
                     <li><Link to="/about" className="p-2">About</Link></li>
-                    <li><Link to="/mycart" className="p-2">My Cart</Link></li>
                 </ul>
 
                 {/* Right: LKR Total and Customer Care */}
                 <div className="hidden md:flex items-center space-x-4">
                     <div className="text-white bg-gray-900 p-2 rounded-lg">
+                        <span><Link to="/mycart" className="p-2">My Cart</Link></span>
                         <span>LKR Total:</span> <span className="font-bold">4500.00</span>
                     </div>
                     <div className="text-white">
