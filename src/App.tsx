@@ -48,7 +48,7 @@ function App() {
                         {/* Content container */}
                         <div className="relative z-10">
                             <Routes>
-                                <Route path="/Nexz-Core-Computers" element={<Home />} />
+                                <Route path="/Nexz-Core-Computers/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
                                 <Route path="/mycart" element={<MyCart />} />
                                 <Route path="/laptop" element={<Laptop />} />
