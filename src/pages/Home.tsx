@@ -68,7 +68,7 @@ const Home = () => {
     return (
         <div>
             {/* Search Bar */}
-            <div className="flex justify-center top-40 items-center my-14">
+            <div className="flex justify-center items-center my-14">
                 <div className="relative w-full max-w-screen-sm px-4">
                     <input
                         type="text"
@@ -84,7 +84,7 @@ const Home = () => {
                 <div className="flex justify-center items-center h-40">
                     <h1 className="text-2xl md:text-4xl font-bold text-white neon-text">
                         <Typewriter
-                            words={['NexCore Computers','Sri Lanka #No 1 PC Shop', 'Island Wide Delivery', 'Fastest Delivery']}
+                            words={['NexCore Computers', 'Sri Lanka #No 1 PC Shop', 'Island Wide Delivery', 'Fastest Delivery']}
                             loop={true}
                             cursor
                             cursorStyle="_"
@@ -98,63 +98,64 @@ const Home = () => {
 
             {/* Image Slider */}
             <div className="flex justify-center items-center my-14">
-            <section className="relative w-2/6 h-[500px] overflow-hidden">
-                <div className="flex transition-transform duration-500"
-                    style={{transform: `translateX(-${currentIndex * 100}%)`}}
+                <section className="relative w-2/6 h-[500px] overflow-hidden">
+                    <div className="flex transition-transform duration-500"
+                         style={{transform: `translateX(-${currentIndex * 100}%)`}}
                     >
-                    {images.map((image, index) => (
-                        <div key={index} className="w-full flex-shrink-0 h-80 ">
-                            <img
-                                src={image}
-                                alt={`Slide ${index + 1}`}
-                                className="w-full h-[400px] object-cover"
-                            />
-                        </div>
-                    ))}
-                </div>
+                        {images.map((image, index) => (
+                            <div key={index} className="w-full flex-shrink-0 h-[500px]">
+                                <img
+                                    src={image}
+                                    alt={`Slide ${index + 1}`}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                        ))}
+                    </div>
 
-                {/* Prev Button */}
-                <button
-                    onClick={handlePrev}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-                >
-                    <FaChevronLeft/>
-                </button>
+                    {/* Prev Button */}
+                    <button
+                        onClick={handlePrev}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                    >
+                        <FaChevronLeft/>
+                    </button>
 
-                {/* Next Button */}
-                <button
-                    onClick={handleNext}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-                >
-                    <FaChevronRight/>
-                </button>
+                    {/* Next Button */}
+                    <button
+                        onClick={handleNext}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+                    >
+                        <FaChevronRight/>
+                    </button>
 
-                {/* Dots Navigation */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    {images.map((_, index) => (
-                        <button
-                            key={index}
-                            className={`w-3 h-3 rounded-full ${
-                                currentIndex === index ? "bg-white" : "bg-gray-400"
-                            }`}
-                            onClick={() => setCurrentIndex(index)}
-                        ></button>
-                    ))}
-                </div>
-            </section>
+                    {/* Dots Navigation */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {images.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`w-3 h-3 rounded-full ${
+                                    currentIndex === index ? "bg-white" : "bg-gray-400"
+                                }`}
+                                onClick={() => setCurrentIndex(index)}
+                            ></button>
+                        ))}
+                    </div>
+                </section>
             </div>
 
+
             <section>
-                <div className="flex flex-col md:flex-row flex-wrap">
+                <div className="flex flex-col md:flex-row justify-center items-center flex-wrap">
                     <ProductSlider
                         title="Special Offers"
                         products={specialOffers}
-                        titleClass="text-white text-4xl"
+                        titleClass="text-white text-4xl text-center"  // Ensure title is centered as well
                     />
                     <ProductSlider
                         title="New Arrivals"
                         products={newArrivals}
-                        titleClass="text-white text-4xl"
+                        titleClass="text-white text-4xl text-center"  // Ensure title is centered as well
                     />
                 </div>
             </section>
@@ -184,7 +185,8 @@ const Home = () => {
                 <div
                     className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 shadow-lg p-6 rounded-lg max-w-xs text-center border border-green-500 hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
                     <FiSettings size={48} className="mx-auto text-white mb-4 neon-text"/>
-                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Customized Orders</h3>
+                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Customized
+                        Orders</h3>
                     <p className="text-gray-200 mt-2">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
@@ -201,7 +203,8 @@ const Home = () => {
                 <div
                     className="bg-gradient-to-r from-red-400 via-red-500 to-red-600 shadow-lg p-6 rounded-lg max-w-xs text-center border border-red-500 hover:shadow-2xl transition-transform duration-300 transform hover:scale-105">
                     <FaTruck size={48} className="mx-auto text-white mb-4 neon-text"/>
-                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Cash on Delivery</h3>
+                    <h3 className="text-xl font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Cash on
+                        Delivery</h3>
                     <p className="text-gray-200 mt-2">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
